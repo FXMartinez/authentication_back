@@ -15,13 +15,13 @@ class Api::V1::UsersController < ApplicationController
         render json:user
     end
 
-    def edit
-        user = User.find([:id])
+    def update
+        user = User.find(params[:id])
         render json: user
     end
 
     def destroy
-        user = User.destroy([:id])
+        user = User.destroy(params[:id])
         render json: user
     end
 
